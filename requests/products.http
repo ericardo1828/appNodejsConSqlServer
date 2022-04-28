@@ -1,0 +1,40 @@
+@api = http://localhost:3000/api/products
+@apivista1 = http://localhost:3000/api/productsvista1
+
+@apiproc1 = http://localhost:3000/api/productsproc1/
+
+{{api}}
+
+### add a product
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "name": "product 2",
+   "description": "some product",
+   "quantity": 10
+}
+
+### get product
+{{api}}/3
+
+### delete product 
+DELETE {{api}}/1
+
+### get count
+{{api}}/count
+
+### update
+PUT {{api}}/3
+Content-Type: application/json
+
+{
+    "name": "platano",
+    "description": "macho",
+    "quantity": 100
+}
+
+### request a una vista
+{{apivista1}}
+
+{{apiproc1}}
